@@ -1173,15 +1173,6 @@ vendor/lib64/libxt_native.so
 vendor/lib64/libxtadapter.so
 vendor/lib64/libxtwifi_ulp_adaptor.so
 
-lib/libloc_core.so
-lib/libloc_eng.so
-lib64/libloc_core.so
-lib64/libloc_eng.so
-lib64/libgps.utils.so
-lib64/hw/gps.default.so
-lib/libgps.utils.so
-lib/hw/gps.default.so
-
 # Graphics
 vendor/lib/egl/eglSubDriverAndroid.so
 vendor/lib/egl/libEGL_adreno.so
