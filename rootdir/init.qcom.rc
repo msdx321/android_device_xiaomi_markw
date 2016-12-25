@@ -198,9 +198,13 @@ on boot
     chown system system /sys/class/leds/red/blink
     chown system system /sys/class/leds/green/blink
     chown system system /sys/class/leds/blue/blink
+    chown system system /sys/class/leds/red/brightness
+    chown system system /sys/class/leds/green/brightness
+    chown system system /sys/class/leds/blue/brightness
 
-	# IR
-	chown system system /sys/class/leds/infrared/transmit
+    # IR
+    chown system system /sys/class/leds/infrared/transmit
+    chown system system /sys/class/leds/infrared/brightness
 
     # Goodix Fingerprint
     chown system system /dev/goodix_fp
