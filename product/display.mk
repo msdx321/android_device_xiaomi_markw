@@ -11,7 +11,7 @@ $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk
 
 # Ambient display
 PRODUCT_PACKAGES += \
-    CMDoze
+    XiaomiDoze
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
