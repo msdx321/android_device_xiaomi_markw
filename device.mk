@@ -14,38 +14,38 @@
 # limitations under the License.
 #
 
-CM_PATH := vendor/cm/device/product
+COMMON_PATH := device/xiaomi/markw/product
 
 # Overlay
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay
 
 # Include common product fragments
-include $(CM_PATH)/common/ant.mk
-include $(CM_PATH)/common/audio.mk
-include $(CM_PATH)/common/bluetooth-le.mk
-include $(CM_PATH)/common/consumerir.mk
-include $(CM_PATH)/common/fingerprint.mk
-include $(CM_PATH)/common/gello.mk
-include $(CM_PATH)/common/gps.mk
-include $(CM_PATH)/common/lights.mk
-include $(CM_PATH)/common/media.mk
-include $(CM_PATH)/common/snap.mk
-include $(CM_PATH)/common/wifi.mk
+include $(COMMON_PATH)/common/ant.mk
+include $(COMMON_PATH)/common/audio.mk
+include $(COMMON_PATH)/common/bluetooth-le.mk
+include $(COMMON_PATH)/common/consumerir.mk
+include $(COMMON_PATH)/common/fingerprint.mk
+include $(COMMON_PATH)/common/gello.mk
+include $(COMMON_PATH)/common/gps.mk
+include $(COMMON_PATH)/common/lights.mk
+include $(COMMON_PATH)/common/media.mk
+include $(COMMON_PATH)/common/snap.mk
+include $(COMMON_PATH)/common/wifi.mk
 
 # Include QCOM product fragments
-include $(CM_PATH)/qcom/audio.mk
-include $(CM_PATH)/qcom/cne.mk
-include $(CM_PATH)/qcom/display.mk
-include $(CM_PATH)/qcom/fm.mk
-include $(CM_PATH)/qcom/media.mk
-include $(CM_PATH)/qcom/power.mk
+include $(COMMON_PATH)/qcom/audio.mk
+include $(COMMON_PATH)/qcom/cne.mk
+include $(COMMON_PATH)/qcom/display.mk
+include $(COMMON_PATH)/qcom/fm.mk
+include $(COMMON_PATH)/qcom/media.mk
+include $(COMMON_PATH)/qcom/power.mk
 
 # Include Cyanogen product fragments
-include $(CM_PATH)/cyanogen/livedisplay.mk
+include $(COMMON_PATH)/cyanogen/livedisplay.mk
 
 # Include device-specific product fragments
-include $(LOCAL_PATH)/product/*.mk
+include $(LOCAL_PATH)/product/specific/*.mk
 
 # Inherit proprietary files
 $(call inherit-product-if-exists, vendor/xiaomi/markw/markw-vendor.mk)
