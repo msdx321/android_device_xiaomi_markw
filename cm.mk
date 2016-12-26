@@ -31,7 +31,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 PRODUCT_NAME := cm_markw
 PRODUCT_DEVICE := markw
 PRODUCT_BRAND := Xiaomi
-PRODUCT_MODEL := Redmi 4 Pro
+PRODUCT_MODEL := Redmi 4
 PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi

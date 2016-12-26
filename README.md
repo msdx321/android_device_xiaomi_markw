@@ -1,1 +1,1 @@
-# Device configuration for Xiaomi Redmi 4 Pro
+# Device configuration for Xiaomi Redmi 4 Prime
