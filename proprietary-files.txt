@@ -1060,16 +1060,20 @@ etc/dpm/dpm.conf
 etc/dpm/nsrm/NsrmConfiguration.xml
 etc/permissions/com.qti.dpmframework.xml
 etc/permissions/dpmapi.xml
-vendor/lib64/libdpmctmgr.so
-vendor/lib64/libdpmfdmgr.so
-vendor/lib64/libdpmframework.so
-vendor/lib64/libdpmnsrm.so
-vendor/lib64/libdpmtcm.so
+framework/com.qti.dpmframework.jar
+framework/dpmapi.jar
+framework/tcmclient.jar
+-priv-app/dpmserviceapp/dpmserviceapp.apk
 vendor/lib/libdpmctmgr.so
 vendor/lib/libdpmfdmgr.so
 vendor/lib/libdpmframework.so
 vendor/lib/libdpmnsrm.so
 vendor/lib/libdpmtcm.so
+vendor/lib64/libdpmctmgr.so
+vendor/lib64/libdpmfdmgr.so
+vendor/lib64/libdpmframework.so
+vendor/lib64/libdpmnsrm.so
+vendor/lib64/libdpmtcm.so
 
 # DRM
 bin/qseecomd
@@ -1336,6 +1340,7 @@ vendor/lib64/libconnctrl.so
 # Perf
 bin/iop
 bin/msm_irqbalance
+bin/energy-awareness
 lib64/libqti-iop.so
 vendor/bin/perfd
 vendor/etc/msm_irqbalance.conf
@@ -1568,6 +1573,16 @@ lib/modules/spidev.ko
 lib/modules/test-iosched.ko
 lib/modules/ufs_test.ko
 lib/modules/wil6210.ko
+
+# Other Binary files
+bin/port-bridge
+bin/ptt_socket_app
+bin/qcom-system-daemon
+bin/ATFWD-daemon
+bin/mtd
+bin/mlipayd
+bin/vsimd
+vendor/bin/mdtpd
 
 # Time services
 -app/TimeService/TimeService.apk
