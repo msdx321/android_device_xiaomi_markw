@@ -1577,12 +1577,7 @@ lib/modules/wil6210.ko
 # Other Binary files
 bin/port-bridge
 bin/ptt_socket_app
-bin/qcom-system-daemon
 bin/ATFWD-daemon
-bin/mtd
-bin/mlipayd
-bin/vsimd
-vendor/bin/mdtpd
 
 # Time services
 -app/TimeService/TimeService.apk
