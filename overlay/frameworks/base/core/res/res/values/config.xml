@@ -100,6 +100,7 @@
     <integer-array translatable="false" name="config_deviceLightCapabilities">
         <item>0</item>
         <item>1</item>
+        <item>3</item>
         <item>5</item>
     </integer-array>
 
