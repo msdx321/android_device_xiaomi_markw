@@ -26,6 +26,7 @@ include $(COMMON_PATH)/common/audio.mk
 include $(COMMON_PATH)/common/bluetooth-le.mk
 include $(COMMON_PATH)/common/consumerir.mk
 include $(COMMON_PATH)/common/fingerprint.mk
+include $(COMMON_PATH)/common/fm.mk
 include $(COMMON_PATH)/common/gello.mk
 include $(COMMON_PATH)/common/gps.mk
 include $(COMMON_PATH)/common/lights.mk
@@ -40,6 +41,7 @@ include $(COMMON_PATH)/qcom/display.mk
 include $(COMMON_PATH)/qcom/fm.mk
 include $(COMMON_PATH)/qcom/media.mk
 include $(COMMON_PATH)/qcom/power.mk
+include $(COMMON_PATH)/qcom/wifi.mk
 
 # Include Cyanogen product fragments
 include $(COMMON_PATH)/cyanogen/livedisplay.mk

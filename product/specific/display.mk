@@ -9,6 +9,11 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 # HWUI overrides
 $(call inherit-product, frameworks/native/build/phone-xxhdpi-3072-hwui-memory.mk)
 
+
+# Permissions
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.hardware.opengles.aep.xml:system/etc/permissions/android.hardware.opengles.aep.xml
+
 # Ambient display
 PRODUCT_PACKAGES += \
     XiaomiDoze
