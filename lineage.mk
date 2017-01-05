@@ -29,7 +29,7 @@ $(call inherit-product, device/xiaomi/markw/device.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := lineageos_markw
+PRODUCT_NAME := lineage_markw
 PRODUCT_DEVICE := markw
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := Redmi 4
