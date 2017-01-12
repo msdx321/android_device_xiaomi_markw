@@ -1,5 +1,6 @@
 #
 # Copyright (C) 2016 The CyanogenMod Project
+#               2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -43,8 +44,8 @@ include $(COMMON_PATH)/qcom/media.mk
 include $(COMMON_PATH)/qcom/power.mk
 include $(COMMON_PATH)/qcom/wifi.mk
 
-# Include Cyanogen product fragments
-include $(COMMON_PATH)/cyanogen/livedisplay.mk
+# Include Lineage product fragments
+include $(COMMON_PATH)/lineage/livedisplay.mk
 
 # Include device-specific product fragments
 include $(LOCAL_PATH)/product/specific/*.mk

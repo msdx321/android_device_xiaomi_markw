@@ -1,2 +1,2 @@
-add_lunch_combo cm_markw-eng
-add_lunch_combo cm_markw-userdebug
+add_lunch_combo lineage_markw-eng
+add_lunch_combo lineage_markw-userdebug
