@@ -37,5 +37,9 @@ PRODUCT_MANUFACTURER := Xiaomi
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    BUILD_FINGERPRINT=Xiaomi/markw/markw:6.0.1/MMB29M/V8.1.3.0.MBECNDI:user/release-keys \
+    PRIVATE_BUILD_DESC="markw-user 6.0.1 MMB29M V8.1.3.0.MBECNDI release-keys"
+
 TARGET_VENDOR := Xiaomi
 TARGET_VENDOR_PRODUCT_NAME := markw
