@@ -33,8 +33,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.telephony.default_network=22,22 \
     ro.telephony.default_cdma_sub=0 \
     ro.use_data_netmgrd=true \
-    service.qti.ims.enabled=1 \
-    telephony.lteOnCdmaDevice=1,1
+    service.qti.ims.enabled=1
 
 # RIL
 PRODUCT_PACKAGES += \
