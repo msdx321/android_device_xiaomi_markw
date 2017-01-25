@@ -1596,3 +1596,7 @@ vendor/lib/libTimeService.so
 # Touchscreen
 etc/ft5346_biel_1080p.ini 
 etc/ft5346_oufei_1080p.ini
+
+# LEDs
+lib/hw/lights.msm8953.so
+lib64/hw/lights.msm8953.so
