@@ -214,6 +214,14 @@ on boot
     setprop persist.sys.fp.vendor none
     start gx_fpd
 
+    #xuchao,add the fp sensor infomation,20161108,start
+    on property:persist.sys.fp.vendor=switchf
+	setprop ro.boot.fpsensor fpc
+
+    on property:persist.sys.fp.vendor=goodix
+	setprop ro.boot.fpsensor gdx
+    #xuchao,add the fp sensor infomation,20161108,end
+
 # msm specific files that need to be created on /data
 on post-fs-data
     #Create directories for Fingerprint
@@ -376,6 +384,7 @@ service perfd /system/vendor/bin/perfd
    user root
    disabled
    socket perfd seqpacket 0666 root system
+   writepid /dev/cpuset/system-background/tasks
 
 service iop /system/bin/iop
     class main

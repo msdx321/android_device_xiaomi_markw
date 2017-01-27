@@ -44,7 +44,7 @@ on fs
     wait /dev/block/bootdevice
 
     mount_all fstab.qcom
-    write /proc/sys/vm/swappiness 100
+#    write /proc/sys/vm/swappiness 100
 
     # Keeping following partitions outside fstab file. As user may not have
     # these partition flashed on the device. Failure to mount any partition in fstab file
@@ -136,12 +136,6 @@ service qseecomd /system/bin/qseecomd
 #   class late_start
 #   user system
 #   group system net_raw
-
-service perfd /system/vendor/bin/perfd
-   class main
-   user root
-   disabled
-   writepid /dev/cpuset/system-background/tasks
 
 service thermal-engine /system/vendor/bin/thermal-engine
    class main
