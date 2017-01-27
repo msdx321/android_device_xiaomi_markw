@@ -1098,17 +1098,20 @@ vendor/lib64/libssd.so
 -etc/qdcm_calib_data_r63350_1080p_video_Tianma.xml
 
 # Fingerprint
+bin/gx_fpcmd
 bin/gx_fpd
-vendor/lib/mmi_fingerprint.so
-vendor/lib64/mmi_fingerprint.so
+lib/hw/fingerprint.default.so
+lib/libcom_fingerprints_service.so
+lib64/hw/fingerprint.default.so
+lib64/hw/fingerprint.goodix.so
+lib64/hw/gxfingerprint.default.so
+lib64/libcom_fingerprints_service.so
 lib64/libfp_client.so
+lib64/libfpnav.so
 lib64/libfpservice.so
 lib64/libtida.so
-lib64/hw/gxfingerprint.default.so
-lib64/hw/fingerprint.goodix.so
-lib64/hw/fingerprint.default.so
-lib/hw/fingerprint.default.so
-lib64/libfpnav.so
+vendor/lib/mmi_fingerprint.so
+vendor/lib64/mmi_fingerprint.so
 
 # FM
 bin/fm_qsoc_patches
