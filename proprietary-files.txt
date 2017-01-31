@@ -1101,9 +1101,9 @@ vendor/lib64/libssd.so
 bin/fingerprintd
 bin/gx_fpcmd
 bin/gx_fpd
-lib/hw/fingerprint.default.so
+lib/hw/fingerprint.default.so|48d7a9b8166230fe1fe995717b5ed3b9a6bf5fcc
 lib/libcom_fingerprints_service.so
-lib64/hw/fingerprint.default.so
+lib64/hw/fingerprint.default.so|ae72ec78c157c1ef99fd4f1190e37852bcb30b7f
 lib64/hw/fingerprint.goodix.so
 lib64/hw/gxfingerprint.default.so
 lib64/libcom_fingerprints_service.so
@@ -1111,8 +1111,8 @@ lib64/libfp_client.so
 lib64/libfpnav.so
 lib64/libfpservice.so
 lib64/libtida.so
-vendor/lib/mmi_fingerprint.so
-vendor/lib64/mmi_fingerprint.so
+vendor/lib/mmi_fingerprint.so|6926a44474b964488ac0b7bcf96248b4c5bbc933
+vendor/lib64/mmi_fingerprint.so|edbcc48c4a7748c45aaa40bfa5509fa9180650c2
 
 # FM
 bin/fm_qsoc_patches
