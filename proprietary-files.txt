@@ -1098,6 +1098,7 @@ vendor/lib64/libssd.so
 -etc/qdcm_calib_data_r63350_1080p_video_Tianma.xml
 
 # Fingerprint
+bin/fingerprintd
 bin/gx_fpcmd
 bin/gx_fpd
 lib/hw/fingerprint.default.so
