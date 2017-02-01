@@ -18,6 +18,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# Navigation Bar
+PRODUCT_PACKAGES += \
+    NaviBar
+
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.opengles.version=196609 \
