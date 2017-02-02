@@ -1128,7 +1128,7 @@ bin/xtwifi-client
 bin/xtwifi-inet-agent
 etc/flp.conf
 etc/gps.conf
-etc/izat.conf
+etc/izat.conf|cfdbcd18d2743befdee1c32cbb1e1338125ada58
 etc/lowi.conf
 etc/permissions/com.qti.location.sdk.xml
 etc/permissions/com.qualcomm.location.xml
