@@ -166,6 +166,9 @@ BOARD_USES_QC_TIME_SERVICES := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
+BOARD_PROVIDES_LIBRIL := true
+BOARD_PROVIDES_RILD := true
+BOARD_RIL_CLASS := ../../../device/xiaomi/markw/ril
 
 # Recovery
 TARGET_RECOVERY_FSTAB := $(LOCAL_PATH)/rootdir/fstab.qcom
