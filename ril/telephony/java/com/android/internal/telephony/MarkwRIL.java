@@ -18,9 +18,10 @@ package com.android.internal.telephony;
 
 import static com.android.internal.telephony.RILConstants.*;
 import android.content.Context;
+import android.os.AsyncResult;
 import android.os.Message;
 import android.os.Parcel;
-import android.os.AsyncResult;
+import android.telephony.SignalStrength;
 import com.android.internal.telephony.uicc.IccIoResult;
 import java.util.ArrayList;
 
@@ -481,6 +482,124 @@ public class MarkwRIL extends RIL implements CommandsInterface {
             }
         }
         return rr;
+    }
+    @Override
+    protected Object
+    responseSignalStrength(Parcel p) {
+        int[] response = new int[13];
+        for (int i = 0; i < 13; i++) {
+            response[i] = p.readInt();
+        }
+        int gsmSignalStrength = response[0]; /* Valid values are (0-31, 99) */
+
+        int gsmBitErrorRate = response[1]; /* bit error rate (0-7, 99) */
+
+        int cdmaDbm = response[2]; /* Valid values are positive integers.
+                                    This value is the actual RSSI value multiplied by -1. */
+
+        int cdmaEcio = response[3]; /* Valid values are positive integers.
+                                    This value is the actual Ec/Io multiplied by -10. */
+
+        int evdoDbm = response[4]; /* Valid values are positive integers.
+                                    This value is the actual RSSI value multiplied by -1. */
+
+        int evdoEcio = response[5]; /* Valid values are positive integers.
+                                    This value is the actual Ec/Io multiplied by -10. */
+
+        int evdoSnr = response[6]; /* Valid values are 0-8.  8 is the highest signal to noise ratio. */
+
+        int lteSignalStrength = response[7]; /* Valid values are (0-31, 99)*/
+
+        int lteRsrp = response[8]; /* The current Reference Signal Receive Power
+                                    in dBm multipled by -1. Range: 44 to 140 dBm */
+
+        int lteRsrq = response[9]; /* The current Reference Signal Receive Quality
+                                    in dB multiplied by -1 Range: 20 to 3 dB. */
+
+        int lteRssnr = response[10]; /* The current reference signal signal-to-noise ratio
+                                    in 0.1 dB units. Range: -200 to +300 */
+
+        int lteCqi = response[11]; /* The current Channel Quality Indicator. Range: 0 to 15. */
+        int gsm = response[12];
+        int TdScdmaRscp = 0;
+        boolean bGsm = false;
+
+        /* LTE */
+        if (lteRsrp >= -97) {
+            lteSignalStrength = 63;
+            lteRssnr = 130;
+            lteRsrp = -98;
+        } else if (lteRsrp >= -105) {
+            lteSignalStrength = 10;
+            lteRssnr = 45;
+            lteRsrp = -108;
+        } else if (lteRsrp >= -113) {
+            lteSignalStrength = 5;
+            lteRssnr = 10;
+            lteRsrp = -118;
+        } else if (lteRsrp >= -125) {
+            lteSignalStrength = 3;
+            lteRssnr = -30;
+            lteRsrp = -128;
+        } else if (lteRsrp >= -44) {
+            lteSignalStrength = 64;
+            lteRssnr = -200;
+            lteRsrp = -140;
+        }
+
+        /* EvDO */
+        if (evdoDbm >= -89) {
+            evdoDbm = -65;
+            evdoSnr = 7;
+        } else if (evdoDbm >= -99) {
+            evdoDbm = -75;
+            evdoSnr = 5;
+        } else if (evdoDbm >= -106) {
+            evdoDbm = -90;
+            evdoSnr = 3;
+        } else if (evdoDbm >= -112) {
+            evdoDbm = -105;
+            evdoSnr = 1;
+        } else {
+            evdoDbm = -999;
+            evdoSnr = -999;
+        }
+
+        /* CDMA */
+        if (cdmaDbm >= -89) {
+            cdmaDbm = -75;
+            cdmaEcio = -90;
+        } else if (cdmaDbm >= -99) {
+            cdmaDbm = -85;
+            cdmaEcio = -110;
+        } else if (cdmaDbm >= -106) {
+            cdmaDbm = -95;
+            cdmaEcio = -130;
+        } else if (cdmaDbm >= -112) {
+            cdmaDbm = -100;
+            cdmaEcio = -150;
+        } else {
+            cdmaDbm = -998;
+            cdmaEcio = -998;
+        }
+
+        /* GSM */
+        if (gsmSignalStrength >= -89) {
+            gsmSignalStrength = 12;
+        } else if (gsmSignalStrength >= -97) {
+            gsmSignalStrength = 8;
+        } else if (gsmSignalStrength >= -103) {
+            gsmSignalStrength = 5;
+        } else {
+            gsmSignalStrength = 0;
+        }
+
+        bGsm = gsm != 0;
+
+        SignalStrength signalStrength = new SignalStrength(gsmSignalStrength, gsmBitErrorRate, cdmaDbm, cdmaEcio, evdoDbm, evdoEcio, evdoSnr,
+                lteSignalStrength, lteRsrp, lteRsrq, lteRssnr, lteCqi, TdScdmaRscp, bGsm);
+
+        return signalStrength;
     }
 
     protected Object
